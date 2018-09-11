@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>PCON</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/flexslider.css">
+	<link rel="stylesheet" href="assets/css/theme-fire.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
+	<link rel="stylesheet" href="assets/css/et-line-icons.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/mdb.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="assets/js/Scripts/angular.min.js"></script>
+    <script src="assets/js/Scripts/angular-route.min.js"></script>
+    <!-- <script src="assets/js/Scripts/script.js"></script> -->
+
+		<script src="app.module.js" ></script>
+    <script src="app.config.js" ></script>
+		<script src="header/header.controller.js"></script>
+</head>
+
+<style>
+
+	body {
+		font-size: 16px;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+   .fon {
+    padding-right: 25px;
+       padding-left:25px;
+
+       font-size: 18px;
+       font-weight: bold;
+       font-style:normal;
+       font-family:Arial, Helvetica, sans-serif;
+       padding-bottom: 10px;
+       padding-top: 10px;
+
+
+   }
+
+   .col{
+    font-size: 15px;
+       font-weight: bold;
+       font-style:normal;
+       font-family:Arial, Helvetica, sans-serif;
+       color:black;
+   }
+
+   /*.navcss{
+       margin:10px;
+   }*/
+
+   .navbar-nav {
+   		margin-left: 70%;
+   }
+
+   .navbar-nav li {
+   		padding-right: 10px;
+   }
+
+   .navbar-nav li a {
+   		font-size: 20px;
+   		font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    letter-spacing: 1px;
+	    color: #292929;
+	    opacity: .5;
+   }
+
+   .navbar-brand {
+   		height: 64px;
+   		margin-left: 20px;
+   }
+
+   #main-content {
+   		padding-top: 50px;
+   		padding-bottom: 50px;
+   		background: #f3f7f7;
+   }
+
+   #main-content .container .row .box {
+   		margin-top: 50px;
+   		margin-right: 78px;
+   		background: #5e6165a1;
+   		min-height: 320px;
+   		border-radius: 1px;
+   		box-shadow: 0 12px 25px 0 rgba(33, 33, 33, 0.5);
+   		transition: transform .3s ease-in-out;
+   		transition: box-shadow .1s ease-in-out;
+
+   }
+
+   #main-content .container .row .box:hover {
+   		transform: rotateY(10deg) translateX(0%);
+   		box-shadow: 0 0px 0px 0 rgba(33, 33, 33, 0.5);
+   }
+
+   #about_us {
+   		background: #fff;
+   		padding: 30px;
+   		box-shadow:  0 14px 28px 0 rgba(115,143,147,.5);
+   }
+
+   .footer {
+
+	    bottom: 0;
+	    width: 100%;
+	    height: 1px;
+	    margin-top: auto;
+   }
+
+   .back-to-top {
+   		border: 2px solid #fff;
+   		padding: 5px;
+   }
+
+</style>
+
+<body ng-app="pcon">
+
+	 <div ng-include="'header/header.template.html'" ng-controller="headerController"></div>
+   <div class="mainContent" ng-view></div>
+	 <div ng-include="'footer/footer.template.html'"></div>
+
+
+
+</body>
+
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/flexslider.min.js"></script>
+	<script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+	<script type="text/javascript" src="assets/js/parallax.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/scripts.js"></script> -->
+	<script type="text/javascript" src="assets/js/carousel.js"></script>
+
+	<!-- <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script> -->
+
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+
+    <!-- <script type="text/javascript" src="assets/js/bootstrap.min.js"></script> -->
+
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+</html>

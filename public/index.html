@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="navbar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pcon</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/script.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!-- <script type="text/javascript" src="subscribeEmail.js"></script> -->
+</head>
+
+
+<style>
+   .fon {
+    padding-right: 25px;
+       padding-left:25px;
+
+       font-size: 18px;
+       font-weight: bold;
+       font-style:normal;
+       font-family:Arial, Helvetica, sans-serif;
+       padding-bottom: 10px;
+       padding-top: 10px;
+
+
+   }
+
+   .col{
+    font-size: 15px;
+       font-weight: bold;
+       font-style:normal;
+       font-family:Arial, Helvetica, sans-serif;
+       color:black;
+   }
+
+   .navcss{
+       margin:10px;
+   }
+
+   @media screen and (min-width: 1024px) {
+      .fa, .material-icons{
+        font-size: 40px;
+        padding-right: 20px;
+        margin-right: 15px;
+     }
+
+      /*#navbarList {
+        margin-left: 63%;
+     }*/
+
+     #navbarList button {
+        background-color: #292929!important;
+        font-size: 16px;
+        margin-left: 10px;
+     }
+
+     #topStrip {
+        max-height: 72px;
+        box-shadow: none;
+        background-color: grey!important;"
+     }
+
+     #navbarRight {
+        margin-left: 2%;
+     }
+    }
+
+   .displayOnHover{
+      display: none;
+      height: 30px;
+      width: auto;
+      padding-left: 5px;
+      padding-right: 5px;
+
+   }
+
+   #notifications {
+      width: 350px;
+   }
+
+   .expand-box {
+      z-index: 10;
+      position: fixed;
+      background-color: #fff;
+      box-shadow: 0 1px 10px 0 rgba(156,163,168,0.7);
+      word-wrap: break-word;
+      font-size: 13px;
+      min-width: 160px;
+   }
+
+   .expand-box .down-arrow {
+      position: absolute;
+      margin-left: 5px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      top: -9px;
+      right: 10px;
+   }
+
+   .fixed-top {
+      z-index: 0;
+   }
+
+   #noticeBox {
+      max-height: 450px;
+      overflow-y: auto;
+      border-bottom: 1px solid #cac3caee;
+   }
+
+   #noticeBox h3 {
+      margin: 10px 5px;
+      font-size: 20px;
+      font-family: 'Open Sans',sans-serif;
+      font-weight: 600;
+   }
+
+   #noticeBody {
+      border-top: 1px solid #eee;
+   }
+
+   #noticeList {
+      list-style-type: none;
+      padding: 5px 10px;
+   }
+
+   #noticeList li {
+      padding-top: 10px;
+      border-bottom: 1px solid #ccc;
+   }
+
+   /*.displayOnHover:hover {
+      display: block;
+      position: relative;
+      top: 5px;
+      transition: top .5s;
+   }*/
+
+</style>
+
+<body ng-controller="navControllers">
+
+
+
+	 <!--Navbar-->
+<nav class="navbar navbar-expand-lg  navbar fixed-top navbar-light bg-light" id="topStrip">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand  navcss" href="#/home">
+         <img src="pcon1.jpg" height="70" width="90" alt="">
+
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto" id="navbarList">
+
+                <li class="nav-item ">
+                  <a class="nav-link fon" href="#home" title="Home">
+                      <i class="material-icons">home</i>
+                  </a>
+                  <div class="displayOnHover"><p>Home</p></div>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link fon" href="#" title="About Us">
+                  <i class="material-icons">font_download</i>
+                  </a>
+                  <div class="displayOnHover"><p>About</p></div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link fon" href="#" title="Team">
+                    <i class="material-icons">people</i>
+                  </a>
+                  <div class="displayOnHover"><p>Team</p></div>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link fon" href="#" title="Repository">
+                    <i class="fa fa-github"></i>
+                  </a>
+                  <div class="displayOnHover"><p>Repository</p></div>
+                </li>
+
+                <li class="nav-item ">
+                  <button class="btn btn-default " type="button" data-toggle="modal" data-target="#SubscribeBox">
+                    Subscribe
+                  </button>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav ml-auto" id="navbarRight">
+                <li class="nav-item ">
+                  <a class="nav-link fon" id="showNotifications" href="#" title="Notifications">
+                    <i class="material-icons"ng-click="getNotices()">notifications</i>
+                  </a>
+                  <div class="displayOnHover"><p>Notifications</p></div>
+                </li>
+            </ul>
+            <!-- Links -->
+
+
+        </div>
+        <!-- Collapsible content -->
+
+        <!-- <div class="collapse navbar-collapse justify-content-right xyz " id="mobileNav">
+            <ul>
+              <li class="nav-item ">
+                  <a class="nav-link fon" href="#home">
+                      <i class="material-icons">home</i>
+                      <p>Home</p>
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link fon" href="#">
+                  <i class="material-icons">font_download</i>
+                  <p>About</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link fon" href="#">
+                    <i class="material-icons">people</i>
+                    <p>Team</p>
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link fon" href="#">
+                    <i class="fa fa-github"></i>
+                    <p>Repository</p>
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link fon" id="showNotifications" href="#">
+                    <i class="material-icons">notifications</i>
+                    <p>Notifications</p>
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <button class="btn btn-default " type="button" data-toggle="modal" data-target="#SubscribeBox" style="background-color: #292929!important; font-size: 16px; margin-left: 40px;">
+                    Subscribe
+                  </button>
+                </li>
+            </ul>
+        </div> -->
+    </nav>
+    <!--/.Navbar-->
+
+    <div class="expand-box" id="notifications" style="right: 2.8%; top: 73px; display: none;">
+        <div class="down-arrow"></div>
+        <div id="noticeBox">
+          <h3>Notifications</h3>
+          <div id="noticeBody">
+            <ul id="noticeList">
+              <li ng-repeat="n in notices">
+                <h4>{{ n.head }}</h4>
+                <p>{{ n.body }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center" style="margin: 10px 0;">
+          <a href="#">Show all</a>
+        </div>
+    </div>
+    <!-- <input type="text" ng-model="email" name="email">
+    <p>{{email}}</p> -->
+<div id="SubscribeBox" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!-- <h4 class="modal-title">Subscribe to our Newsletter</h4> -->
+      </div>
+      <div class="modal-body">
+        <input type="text" ng-model="email" name="email" class="form-control" placeholder="Enter your email to Subscribe">
+        <p>Your email : {{email}}</p>
+        <p>{{status}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" ng-click="subscribe(email)"></a>Subscribe</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <div ng-view></div>
+
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+
+        // $(".nav-item").hover(function() {
+
+        //   $(".displayOnHover", this).css({"display":"block", "background-color":"#eee", "position":"absolute", "transition":"display .8s"});
+        // }, function(){
+        //   $(".displayOnHover", this).fadeOut("slow");
+
+        // });
+        $( function() {
+          $( document ).tooltip();
+        } );
+
+        $("#showNotifications").click(function() {
+            $("#notifications").toggle();
+        });
+
+    </script>
+</body>
+
+</html>
